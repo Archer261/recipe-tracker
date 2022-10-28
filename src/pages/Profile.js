@@ -1,14 +1,12 @@
 import React from 'react'
-import Recipies from '../components/Recipes';
+import RecipeList from '../components/RecipeList';
 
-const test = ["test", 'test', 'test'];
 
-function Profile({ test }) {
+function Profile() {
+
     return (
-        <div>
-            <div class="flex flex-wrap justify-center bg-secondary">
-                {test.map(ele => (<Recipies />))}
-            </div>
+        <div class="flex flex-wrap justify-center bg-secondary">
+            <RecipeList />
         </div>
 
     );
