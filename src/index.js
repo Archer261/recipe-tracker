@@ -7,6 +7,6 @@ import Profile from './pages/Profile';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <Profile />
+        <App />
     </BrowserRouter>
 );

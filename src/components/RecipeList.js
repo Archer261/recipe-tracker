@@ -14,7 +14,6 @@ function RecipeList() {
                 <RecipeCard rec={ele} />
             )
             )}
-            {/* <RecipeCard rec={recList} /> */}
         </div>
     );
 }
