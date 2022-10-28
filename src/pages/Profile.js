@@ -1,13 +1,15 @@
 import React from 'react'
-import Recipies from '../components/Recipes';
+import RecipeCard from '../components/RecipeCard';
+import RecipeList from '../components/RecipeList';
 
-const test = ["test", 'test', 'test'];
 
 function Profile({ test }) {
+
     return (
         <div>
+
             <div class="flex flex-wrap justify-center bg-secondary">
-                {test.map(ele => (<Recipies />))}
+                <RecipeList />
             </div>
         </div>
 
