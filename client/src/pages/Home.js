@@ -9,7 +9,10 @@ function Home() {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">🍽️ Recipies Your Way!</h1>
                     <p className="mb-5"></p>
-                    <label for="my-modal-6" className="btn modal-button text-accent-content bg-primary">Log In</label>
+                    {/* <div className='flex mx-5'> */}
+                    <label for="my-modal-5" className="btn modal-button text-accent-content bg-primary mx-5">Sign Up</label>
+                    <label for="my-modal-6" className="btn modal-button text-accent-content bg-primary mx-5">Log In</label>
+                    {/* </div> */}
                 </div>
             </div>
         </div>
