@@ -10,8 +10,8 @@ function Home() {
                     <h1 className="mb-5 text-5xl font-bold">🍽️ Recipies Your Way!</h1>
                     <p className="mb-5"></p>
                     {/* <div className='flex mx-5'> */}
-                    <label for="my-modal-5" className="btn modal-button text-accent-content bg-primary mx-5">Sign Up</label>
                     <label for="my-modal-6" className="btn modal-button text-accent-content bg-primary mx-5">Log In</label>
+                    <label for="my-modal-5" class="btn modal-button text-accent-content bg-success text-white mx-2">Sign Up</label>
                     {/* </div> */}
                 </div>
             </div>

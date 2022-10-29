@@ -21,11 +21,11 @@ function Navigation() {
     return (
         <div className="navbar bg-base-100 w-full flex flex-row gap-x-2 justify-evenly py-1 drop-shadow-md-top">
             <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl"><Link to={`/`} >🍽️ Recipe Tracker</Link></a>
+                <a className="btn btn-ghost normal-case text-xl text-white"><Link to={`/`} >🍽️ Recipe Tracker</Link></a>
             </div>
             <div className="flex-none gap-2">
 
-
+                <Link to={`/myrecipes`}><button className="btn btn-primary text-white mr-3">My Recipies</button></Link>
                 <Link to={`/newrecipe`}><button className="btn btn-success text-white mr-3">New Recipe</button></Link>
 
                 {/* Profile Name */}
