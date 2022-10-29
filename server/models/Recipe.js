@@ -5,11 +5,11 @@ const recipeSchema = new Schema({
         type: String,
         required: true,
     },
-    desciption: {
+    description: {
         type: String,
         required: true,
     },
-    notes: {
+    image: {
         type: String,
     },
     notes: {
@@ -41,6 +41,6 @@ const recipeSchema = new Schema({
     ],
 });
 
-const Recipe = model('recipe', recipeSchema);
+const Recipe = model('Recipe', recipeSchema);
 
 module.exports = Recipe;

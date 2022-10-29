@@ -15,9 +15,10 @@ const indgredientSchema = new Schema({
     recipe: {
         type: Schema.Types.ObjectId,
         ref: 'Recipe',
+        required: true,
     },
 });
 
-const Ingredient = model('ingredient', indgredientSchema);
+const Ingredient = model('Ingredient', indgredientSchema);
 
 module.exports = Ingredient;

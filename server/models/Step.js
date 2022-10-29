@@ -12,9 +12,10 @@ const stepSchema = new Schema({
     recipe: {
         type: Schema.Types.ObjectId,
         ref: 'Recipe',
+        required: true,
     },
 });
 
-const Step = model('step', stepSchema);
+const Step = model('Step', stepSchema);
 
 module.exports = Step;
