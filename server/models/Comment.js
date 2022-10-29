@@ -14,9 +14,10 @@ const commentSchema = new Schema({
     recipe: {
         type: Schema.Types.ObjectId,
         ref: 'Recipe',
+        required: true,
     },
 });
 
-const Comment = model('comment', commentSchema);
+const Comment = model('Comment', commentSchema);
 
 module.exports = Comment;
