@@ -1,4 +1,6 @@
 import React from 'react'
+import { Outlet, Link } from 'react-router-dom'
+import Profile from '../pages/Profile'
 
 const navigateToProfile = () => {
     navigateToProfile('/profile')
@@ -19,9 +21,12 @@ function Navigation() {
     return (
         <div className="navbar bg-base-100 w-full flex flex-row gap-x-2 justify-evenly py-1 drop-shadow-md-top">
             <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl">🍽️ Recipe Tracker</a>
+                <a className="btn btn-ghost normal-case text-xl"><Link to={`/`} >🍽️ Recipe Tracker</Link></a>
             </div>
             <div className="flex-none gap-2">
+
+
+                <Link to={`/newrecipe`}><button className="btn btn-success text-white mr-3">New Recipe</button></Link>
 
                 {/* Profile Name */}
                 <h2 className='text-white'>{profile.name}</h2>
@@ -36,7 +41,7 @@ function Navigation() {
                     <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                         <li>
                             <a className="justify-between">
-                                Profile
+                                <Link to={`/profile`} >Profile</Link>
                             </a>
                         </li>
                         <li><a>Recipies</a></li>

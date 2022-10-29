@@ -7,7 +7,7 @@ function Profile() {
     return (
         <div class="bg-secondary">
             <div class="grid justify-items-stretch ...">
-                <h1 className="justify-self-center text-2xl">My Recipies</h1>
+                <h1 className="justify-self-center text-2xl text-white">My Recipies</h1>
             </div>
             <RecipeList />
 
