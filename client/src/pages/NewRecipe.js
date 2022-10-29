@@ -1,6 +1,6 @@
 import { from } from '@apollo/client';
 import { React, useState } from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, useNavigate } from 'react-router-dom'
 import FileUpload from '../components/FileUpload';
 import SampleCard from '../components/SampleCard';
 
@@ -11,6 +11,7 @@ import SampleCard from '../components/SampleCard';
 
 
 function NewRecipe() {
+    const navigate = useNavigate();
 
     let recObj = {}
 
@@ -30,7 +31,7 @@ function NewRecipe() {
 
 
                 <div class="form-control shadow-2xl p-5">
-                    <div className='flex flex-row justify-between mx-10'>
+                    <div className='flex flex-row justify-between mx-10 items-center'>
                         <div className='flex flex-col'>
                             <label className="input-group input-group-sm my-2 text-white">
                                 <span>Recipe Name</span>
@@ -52,8 +53,9 @@ function NewRecipe() {
 
                 <div className="divider"></div>
 
-
-                <h2 className='justify-self-center'>Steps</h2>
+                <div class="grid justify-items-stretch ...">
+                    <h2 className='justify-self-start pl-6 text-xl'>Steps</h2>
+                </div>
                 <div class="form-control shadow-2xl p-5">
                     <input type="text" placeholder="Type here" className="input input-bordered input-sm w-full max-w-xs m-2 bg-white" />
 
@@ -66,7 +68,7 @@ function NewRecipe() {
                 </div>
 
                 <div class="flex justify-between ...">
-                    <button class="btn btn-lg bg-primary-focus m-10">Cancel</button>
+                    <button class="btn btn-lg bg-primary-focus m-10" onClick={() => navigate(-1)}>Cancel</button>
                     <button class="btn btn-lg bg-primary-focus m-10">Save</button>
                 </div>
 

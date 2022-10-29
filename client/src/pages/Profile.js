@@ -1,5 +1,6 @@
 import React from 'react'
 import RecipeList from '../components/RecipeList';
+import { Link } from 'react-router-dom';
 
 
 function Profile() {
@@ -7,7 +8,7 @@ function Profile() {
     return (
         <div class="bg-secondary">
             <div className="artboard artboard-horizontal phone-2 drop-shadow-2xl">
-                <div className='flex flex-row px-10 py-10 w-screen justify-between'>
+                <div className='flex flex-row px-10 py-20 w-screen justify-between'>
                     <div className='flex flex-col mx-20 my-10 justify-center text-white pl-10'>
                         <img className="mask mask-squircle h-auto" src="https://placeimg.com/160/160/arch" />
                         <span>Name</span>
@@ -28,7 +29,9 @@ function Profile() {
                 <h1 className="justify-self-center text-3xl md:text-4xl font-medium mb-2 text-white">My Recipies</h1>
             </div>
             <RecipeList />
-
+            <div class="grid justify-items-stretch ...">
+                <div className='justify-self-center pb-20 my-10'><Link to={`/myrecipes`}><button className="btn btn-wide">Show All Recipes</button></Link></div>
+            </div>
         </div>
 
     );

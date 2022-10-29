@@ -11,11 +11,12 @@ import MyRecipes from '../pages/MyRecipes';
 
 
 function App() {
+
     return (
-        <div class="flex flex-col h-screen justify-between">
+        <div class="flex flex-col h-screen justify-between align-center">
             <BrowserRouter>
                 <Header />
-                <div className='relative mt-10'>
+                <div className='relative my-10'>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="profile" element={<Profile />} />
