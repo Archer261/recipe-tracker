@@ -18,6 +18,9 @@ const resolvers = {
     },
 
     Mutation: {
+        addUser: async (parent, { username, email, password }) => {
+            return User.create({ username, email, password });
+        },
         addRecipe: async (parent, { title, description, note }) => {
             return Recipe.create({ title, description, note });
         },
