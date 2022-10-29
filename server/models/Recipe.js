@@ -23,43 +23,20 @@ const recipeSchema = new Schema({
     },
     ingredients: [
         {
-            ingredientName: {
-                type: String,
-                required: true,
-            },
-            measurement: {
-                type: String,
-            },
-            quantity: {
-                type: Number,
-                required: true,
-            },
+            type: Schema.Types.ObjectId,
+            ref: 'Ingredient',
         },
     ],
     steps: [
         {
-            stepNumber: {
-                type: Number,
-                required: true,
-            },
-            stepText: {
-                type: String,
-                required: true,
-            },
+            type: Schema.Types.ObjectId,
+            ref: 'Step',
         },
     ],
     comments: [
         {
-            commentAuthor: {
-                type: String,
-                required: true,
-            },
-            commentText: {
-                type: String,
-                required: true,
-                minlength: 1,
-                maxlength: 280,
-            },
+            type: Schema.Types.ObjectId,
+            ref: 'Comment',
         },
     ],
 });

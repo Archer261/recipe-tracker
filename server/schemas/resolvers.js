@@ -21,7 +21,7 @@ const resolvers = {
         addRecipe: async (parent, { title, description, note }) => {
             return Recipe.create({ title, description, note });
         },
-        addingredient: async (parent, { recipeId, ingredientName, measurement, quantity }) => {
+        addIngredient: async (parent, { recipeId, ingredientName, measurement, quantity }) => {
             return Recipe.findOneAndUpdate(
                 { _id: recipeId },
                 {
