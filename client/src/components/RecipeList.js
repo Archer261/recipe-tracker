@@ -15,13 +15,32 @@ const recList = [
 ]
 
 function RecipeList() {
-    return (
-        <div className='flex flex-wrap justify-center'>
+
+    // Check the current URL, if we are on the /myrecipes page, render all recipes, othwise, render only 5
+    var location = window.location.href
+
+    if (window.location.href.endsWith('/myrecipes')) {
+        location = <div className='flex flex-wrap justify-center'>
             {recList.map((ele) => (
                 <RecipeCard rec={ele} />
             )
             )}
-        </div>
+        </div>;
+    } else {
+        location = <div className='flex flex-wrap justify-center'>
+            {recList.slice(0, 8).map((ele) => (
+                <RecipeCard rec={ele} />
+            )
+            )}
+        </div>;
+    }
+
+
+    return (
+        <>
+            {location}
+        </>
+
     );
 }
 

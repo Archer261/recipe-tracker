@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 import Profile from '../pages/Profile'
 
@@ -44,7 +44,7 @@ function Navigation() {
                                 <Link to={`/profile`} >Profile</Link>
                             </a>
                         </li>
-                        <li><a>Recipies</a></li>
+                        <li><a><Link to={`/myrecipes`}>Recipies</Link></a></li>
                         <li><a>Logout</a></li>
                     </ul>
                 </div>
