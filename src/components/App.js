@@ -18,7 +18,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="profile" element={<Profile />} />
-                        <Route path="recipe" element={<Recipe />} />
+                        <Route path="recipe/:id" element={<Recipe />} />
                         <Route path="newrecipe" element={<NewRecipe />} />
                     </Routes>
                 </div>

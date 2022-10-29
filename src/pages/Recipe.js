@@ -12,9 +12,9 @@ function Recipe() {
 
     console.log(singleRecipe.steps)
     return (
-        <div class="bg-secondary max-h-screen">
+        <div class="bg-base-100 max-h-screen">
             <div class="grid justify-items-stretch ...">
-                <div className="hero bg-base-100">
+                <div className="hero bg-primary">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
@@ -36,7 +36,8 @@ function Recipe() {
                     {/* Steps */}
                     <div className='w-1/2 bg-base-200 h-12 m-5'>
                         <h2 className='text-2xl'>Steps:</h2>
-                        <ol className='text-white'>
+                        <div className="divider bg-base-100"></div>
+                        <ol role="list" class='marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400'>
                             <Step stps={singleRecipe.steps} />
                         </ol>
                     </div>
@@ -47,7 +48,7 @@ function Recipe() {
                     <div className='w-1/2 bg-base-100 h-12 m-5'>
                         <h2 className='text-2xl'>Ingredients:</h2>
                         <div className="divider bg-base-100"></div>
-                        <ul className='text-white'>
+                        <ul role="list" class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400">
                             <Ingredient ings={singleRecipe.ingredients} />
                         </ul>
                     </div>
