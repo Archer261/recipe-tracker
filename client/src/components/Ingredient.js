@@ -5,7 +5,7 @@ function Ingredient({ ings }) {
     return (
         <>
             {ings.map((ele) => (
-                <li>
+                <li className='border'>
                     {ele}
                 </li>
             )
