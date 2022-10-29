@@ -30,6 +30,12 @@ function Login() {
                 <div className="modal-box">
                     <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
                         <div className="mb-4">
+                            <div className='flex flex-row justify-between'>
+                                <h2 className="font-bold text-lg">Sign In</h2>
+                                <label for="my-modal-6" className="btn btn-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                </label>
+                            </div>
                             <label className="block text-grey-darker text-sm font-bold mb-2" for="username">
                                 Username
                             </label>
