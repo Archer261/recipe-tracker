@@ -15,7 +15,7 @@ const recipeSchema = new Schema({
     notes: {
         type: String,
     },
-    Rating: {
+    rating: {
         type: Number,
     },
     public: {
