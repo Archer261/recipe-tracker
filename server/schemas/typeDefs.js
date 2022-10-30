@@ -46,33 +46,33 @@ const typeDefs = gql`
     }
 
     input RecipeInput {
-      recipeName: String!
-      description: String
-      notes: String
-      rating: Int
-      public: Boolean
-      ingredients: [IngredientInput]
-      steps: [StepInput]
-      comments[CommentInput]
+        recipeName: String!
+        description: String
+        notes: String
+        rating: Int
+        public: Boolean
+        ingredients: [IngredientInput]
+        steps: [StepInput]
+        comments: [CommentInput]
     }
-    
+
     input IngredientInput {
-      recipeId: String!
-      ingredientName: String!
-      measurement: String!
-      quantity: Float!
+        recipeId: String!
+        ingredientName: String!
+        measurement: String!
+        quantity: Float!
     }
 
     input StepInput {
-      recipeId: String!
-      stepNumber: Int!
-      stepText: String!
+        recipeId: String!
+        stepNumber: Int!
+        stepText: String!
     }
 
     input CommentInput {
-      recipeId: String!
-      commentText: String
-      commentAuthor: String
+        recipeId: String!
+        commentText: String
+        commentAuthor: String
     }
 
     type Query {
@@ -93,10 +93,10 @@ const typeDefs = gql`
         addIngredient(IngredientInput: IngredientInput): Recipe
         addStep(StepInput: StepInput): Recipe
         addComment(CommentInput: CommentInput): Recipe
-        // removeRecipe(recipeId: ID!): Recipe
-        // removeIngredient(recipeId: ID!, IngredientId: ID!): Recipe
-        // removeStep(recipeId: ID!, stepId: ID!): Recipe
-        // removeComment(recipeId: ID!, commentId: ID!): Recipe
+        removeRecipe(recipeId: ID!): Recipe
+        removeIngredient(recipeId: ID!, IngredientId: ID!): Recipe
+        removeStep(recipeId: ID!, stepId: ID!): Recipe
+        removeComment(recipeId: ID!, commentId: ID!): Recipe
     }
 `;
 
