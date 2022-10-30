@@ -31,7 +31,7 @@ function NewRecipe() {
             <div className='flex flex-col mx-5 my-5'>
 
 
-                <div class="form-control shadow-2xl p-10  bg-secondary rounded-md">
+                <div class="form-control shadow-2xl p-10  bg-gradient-to-l from-indigo-500 rounded-md">
                     <div className='flex flex-col justify-between mx-10 items-center lg:flex-row'>
                         <div className='flex flex-col shadow-2x p-10 w-full'>
                             <label className="input-group input-group-sm my-2 text-white">

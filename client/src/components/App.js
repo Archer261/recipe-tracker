@@ -7,16 +7,18 @@ import Footer from './Footer';
 import { Routes, Route, useNavigate, BrowserRouter } from 'react-router-dom';
 import NewRecipe from '../pages/NewRecipe';
 import MyRecipes from '../pages/MyRecipes';
+import AddNewBtn from './AddNewBtn';
 
 
 
 function App() {
 
     return (
-        <div class="flex flex-col h-screen justify-between align-center">
+        <div class="flex flex-col h-screen justify-between align-center font-bold">
             <BrowserRouter>
                 <Header />
                 <div className='relative my-10'>
+                    {/* <AddNewBtn /> */}
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="profile" element={<Profile />} />
