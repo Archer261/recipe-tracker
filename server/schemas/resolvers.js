@@ -142,15 +142,18 @@ const resolvers = {
                 notes,
                 public,
             });
-            await recipe.save();
+            await newRecipe.save();
             return newRecipe;
         },
         addIngredient: async (_, { IngredientInput: { recipeId, ingredientName, measurement, quantity } }) => {
             // find the recipe by id
+            console.log('here 1');
             const recipe = await Recipe.findById(recipeId);
+            console.log('here 2');
 
             // check if the transaction exists
             if (recipe) {
+                console.log('here 3');
                 // if exists, push datas into items of transaction
                 recipe.ingredients.unshift({
                     ingredientName,
@@ -158,6 +161,10 @@ const resolvers = {
                     quantity,
                 });
             } else throw new Error('recipe does not exist');
+            await recipe.save();
+            return recipe;
+            console.log('here 4');
+            console.log(recipe.ingredients[0]);
         },
         addStep: async (_, { StepInput: { recipeId, stepNumber, stepText } }) => {
             // find the recipe by id
