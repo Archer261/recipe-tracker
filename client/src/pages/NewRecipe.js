@@ -32,7 +32,7 @@ function NewRecipe() {
 
 
                 <div class="form-control shadow-2xl p-10  bg-secondary rounded-md">
-                    <div className='flex flex-row justify-between mx-10 items-center'>
+                    <div className='flex flex-col justify-between mx-10 items-center lg:flex-row'>
                         <div className='flex flex-col shadow-2x p-10 w-full'>
                             <label className="input-group input-group-sm my-2 text-white">
                                 <span>Recipe Name</span>
@@ -48,6 +48,10 @@ function NewRecipe() {
                         </div>
                         <SampleCard />
                     </div>
+                    <div class="flex justify-between lg:hidden ...">
+                        <button class="btn btn-lg bg-base-100 m-10" onClick={() => navigate(-1)}>Cancel</button>
+                        <button class="btn btn-lg bg-base-100 m-10">Save</button>
+                    </div>
                 </div>
 
 
@@ -57,7 +61,7 @@ function NewRecipe() {
 
                 <NewRecipeForm />
 
-                <div class="flex justify-between ...">
+                <div class="flex justify-between hidden lg:flex ...">
                     <button class="btn btn-lg bg-primary-focus m-10" onClick={() => navigate(-1)}>Cancel</button>
                     <button class="btn btn-lg bg-primary-focus m-10">Save</button>
                 </div>
