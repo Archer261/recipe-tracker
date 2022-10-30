@@ -2,7 +2,6 @@ import React from 'react'
 import Ingredient from '../components/Ingredient';
 import Step from '../components/Step';
 
-
 const singleRecipe = {
     recipe: 'spaghetti', id: 1, steps: ["Make the food", "Eat food"]
     , ingredients: ["Pasta", "Sauce", "Ground Beef", "Salt", "Pepper"]
@@ -30,7 +29,6 @@ function Recipe() {
                 {/* Divider */}
                 <div className="divider bg-base-100"></div>
                 {/* Divider */}
-
 
                 <div className="flex bg-base-200 max-h-full">
                     {/* Steps */}
