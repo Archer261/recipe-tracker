@@ -1,30 +1,14 @@
 const db = require('../config/connection');
-const { Model1, Model2 } = require('../models');
-const model1Seeds = require('./model1Seeds.json');
-const model2Seeds = require('./model2Seeds.json');
+const { User, Recipe, Ingredient, Step, Comment } = require('../models');
+//const userSeeds = require('./userSeeds.json');
+const recipeSeeds = require('./recipeSeeds');
 
 db.once('open', async () => {
-    try {
-        await Model1.deleteMany({});
-        await Model2.deleteMany({});
-
-        await User.create(userSeeds);
-
-        for (let i = 0; i < thoughtSeeds.length; i++) {
-            const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-            const user = await User.findOneAndUpdate(
-                { username: thoughtAuthor },
-                {
-                    $addToSet: {
-                        thoughts: _id,
-                    },
-                }
-            );
-        }
-    } catch (err) {
-        console.error(err);
-        process.exit(1);
-    }
+    await Ingredient.deleteMany({});
+    await Step.deleteMany({});
+    await Comment.deleteMany({});
+    await Recipe.deleteMany({});
+    await Recipe.create(recipeSeeds);
 
     console.log('all done!');
     process.exit(0);
