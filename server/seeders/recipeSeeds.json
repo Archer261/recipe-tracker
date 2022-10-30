@@ -1,0 +1,30 @@
+[
+    {
+        "recipeName": "Baked Pork Chops",
+        "description":
+            "These simple oven baked pork chops are coated in a seasoned breadcrumb mixture that isnt a big mess to prep, perfect for a weeknight dinner. Look for Japanese panko breadcrumbs which are coarse and crunchy. This recipe calls for Italian seasoning but feel empowered to change up the flavor with an herb and spice blend of your choice (just check the label to make sure there isnt added sodium): a peppercorn mix, or even pumpkin pie spice would work nicely. Or try adding finely chopped fresh herbs like parsley, tarragon and dill to the breading along with fresh lemon zest. You can even make the seasoned breadcrumbs ahead of time and store it in a plastic resealable bag in the freezer, just add the oil and then shake and bake your pork chops.",
+        "ingredients": [
+            {
+                "ingredientName": "Panko",
+                "measurement": "cups",
+                "quantity": 1.5
+            },
+            {
+                "ingredientName": "bone-in pork chop",
+                "measurement": "pieces",
+                "quantity": 4
+            }
+        ],
+        "steps": [
+            {
+                "stepNumber": 1,
+                "stepText": "Preheat the oven to 450 degrees F."
+            },
+            {
+                "stepNumber": 2,
+                "stepText":
+                    "Combine the panko, oil, Parmesan, Italian seasoning and 3/4 teaspoon each salt and pepper in a large resealable plastic bag. Put the pork chops in a large bowl and toss to coat with 1 tablespoon water. Place the pork chops in the bag and shake well to coat, pressing the breadcrumb mixture firmly into the meat."
+            }
+        ]
+    }
+]

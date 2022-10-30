@@ -120,57 +120,114 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addRecipe: async (parent, { recipeName, description, note, ingredients, steps }, context) => {
-            if (context.user) {
-                const recipe = new Recipe({ recipeName, description, note, ingredients, steps });
+        // addRecipe: async (parent, { recipeName, description, note, ingredients, steps }, context) => {
+        //     if (context.user) {
+        //         const recipe = new Recipe({ recipeName, description, note, ingredients, steps });
 
-                await Recipe.create(recipe);
+        //         await Recipe.create(recipe);
 
-                await User.findByIdAndUpdate(context.user._id, {
-                    $push: { recipes: recipe },
+        //         await User.findByIdAndUpdate(context.user._id, {
+        //             $push: { recipes: recipe },
+        //         });
+
+        //         return recipe;
+        //     }
+
+        //     throw new AuthenticationError('Not logged in');
+        // },
+        addRecipe: async (_, { RecipeInput: { recipeName, description, notes, public } }) => {
+            const newRecipe = new Recipe({
+                recipeName,
+                description,
+                notes,
+                public,
+            });
+            await newRecipe.save();
+            return newRecipe;
+        },
+        addIngredient: async (_, { IngredientInput: { recipeId, ingredientName, measurement, quantity } }) => {
+            // find the recipe by id
+            console.log('here 1');
+            const recipe = await Recipe.findById(recipeId);
+            console.log('here 2');
+
+            // check if the transaction exists
+            if (recipe) {
+                console.log('here 3');
+                // if exists, push datas into items of transaction
+                recipe.ingredients.unshift({
+                    ingredientName,
+                    measurement,
+                    quantity,
                 });
+            } else throw new Error('recipe does not exist');
+            await recipe.save();
+            return recipe;
+            console.log('here 4');
+            console.log(recipe.ingredients[0]);
+        },
+        addStep: async (_, { StepInput: { recipeId, stepNumber, stepText } }) => {
+            // find the recipe by id
+            const recipe = await Recipe.findById(recipeId);
 
-                return recipe;
-            }
+            // check if the transaction exists
+            if (recipe) {
+                // if exists, push datas into items of transaction
+                recipe.steps.unshift({
+                    stepNumber,
+                    stepText,
+                });
+            } else throw new Error('recipe does not exist');
+        },
+        addComment: async (_, { CommentInput: { recipeId, commentText, commentAuthor } }) => {
+            // find the recipe by id
+            const recipe = await Recipe.findById(recipeId);
 
-            throw new AuthenticationError('Not logged in');
+            // check if the transaction exists
+            if (recipe) {
+                // if exists, push datas into items of transaction
+                recipe.comments.unshift({
+                    commentText,
+                    commentAuthor,
+                });
+            } else throw new Error('recipe does not exist');
         },
-        addIngredient: async (parent, { recipeId, ingredientName, measurement, quantity }) => {
-            return Recipe.findOneAndUpdate(
-                { _id: recipeId },
-                {
-                    $addToSet: { ingredients: { ingredientName, measurement, quantity } },
-                },
-                {
-                    new: true,
-                    runValidators: true,
-                }
-            );
-        },
-        addStep: async (parent, { recipeId, stepNumber, stepText }) => {
-            return Recipe.findOneAndUpdate(
-                { _id: recipeId },
-                {
-                    $addToSet: { steps: { stepNumber, stepText } },
-                },
-                {
-                    new: true,
-                    runValidators: true,
-                }
-            );
-        },
-        addComment: async (parent, { recipeId, commentText }) => {
-            return Recipe.findOneAndUpdate(
-                { _id: recipeId },
-                {
-                    $addToSet: { comments: { commentText } },
-                },
-                {
-                    new: true,
-                    runValidators: true,
-                }
-            );
-        },
+        // addIngredient: async (parent, { recipeId, ingredientName, measurement, quantity }) => {
+        //     return Recipe.findOneAndUpdate(
+        //         { _id: recipeId },
+        //         {
+        //             $addToSet: { ingredients: { ingredientName, measurement, quantity } },
+        //         },
+        //         {
+        //             new: true,
+        //             runValidators: true,
+        //         }
+        //     );
+        // },
+        // addStep: async (parent, { recipeId, stepNumber, stepText }) => {
+        //     return Recipe.findOneAndUpdate(
+        //         { _id: recipeId },
+        //         {
+        //             $addToSet: { steps: { stepNumber, stepText } },
+        //         },
+        //         {
+        //             new: true,
+        //             runValidators: true,
+        //         }
+        //     );
+        // },
+        // addComment: async (parent, { recipeId, commentText }) => {
+        //     return Recipe.findOneAndUpdate(
+        //         { _id: recipeId },
+        //         {
+        //             $addToSet: { comments: { commentText } },
+        //         },
+        //         {
+        //             new: true,
+        //             runValidators: true,
+        //         }
+        //     );
+        // },
         removeRecipe: async (parent, { recipeId }) => {
             return Recipe.findOneAndDelete({ _id: thoughtId });
         },
