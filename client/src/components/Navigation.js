@@ -64,11 +64,9 @@ function Navigation() {
                 <ul tabIndex={0} className="mt-3 p-2 dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                     <li><a>New Recipe</a></li>
                     <li><a><Link to={`/myrecipes`}>My Recipes</Link></a></li>
-                    <li><a><Link to={`/myrecipes`}>Profile</Link></a></li>
+                    <li className=''><a><Link to={`/profile`}>Profile</Link></a></li>
                 </ul>
             </div>
-
-
 
             {/* <div className="flex-none lg:hidden">
                 <label tabIndex={0} htmlFor="my-drawer-4" className="btn btn-square btn-ghost">
