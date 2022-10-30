@@ -5,7 +5,7 @@ function Step({ stps }) {
     return (
         <>
             {stps.map((ele) => (
-                <li className='border'>{ele}</li>
+                <li>{ele}</li>
             )
             )}
         </>

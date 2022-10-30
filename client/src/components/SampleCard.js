@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactStars from "react-rating-stars-component"
 
 
 function SampleCard({ rec }) {
@@ -6,7 +7,7 @@ function SampleCard({ rec }) {
     return (
         <div className='flex flex-col'>
             <div class="grid justify-items-stretch ...">
-                <h2 className='justify-self-center'>Sample Recipe Card</h2>
+                <h2 className='justify-self-center text-base-100'>Sample Recipe Card</h2>
             </div>
             <div className="card card-compact w-96 bg-base-100 drop-shadow-2xl m-3">
 
@@ -14,6 +15,13 @@ function SampleCard({ rec }) {
                 <div className="card-body">
                     <h2 className="card-title"></h2>
                     <p></p>
+                    <div className='pb-2'>
+                        <ReactStars
+                            count={5}
+                            size={24}
+                            activeColor="#ffd700"
+                        />
+                    </div>
 
                     <div className="card-actions justify-between">
                         <button className="btn btn-primary">Open</button>
