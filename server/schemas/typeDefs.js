@@ -31,21 +31,48 @@ const typeDefs = gql`
         ingredientName: String!
         measurement: String!
         quantity: Float!
-        recipe: Recipe
     }
 
     type Step {
         _id: ID
         stepNumber: Int!
         stepText: String!
-        recipe: Recipe
     }
 
     type Comment {
         _id: ID
         commentText: String
         commentAuthor: String
-        recipe: Recipe
+    }
+
+    input RecipeInput {
+      recipeName: String!
+      description: String
+      notes: String
+      rating: Int
+      public: Boolean
+      ingredients: [IngredientInput]
+      steps: [StepInput]
+      comments[CommentInput]
+    }
+    
+    input IngredientInput {
+      recipeId: String!
+      ingredientName: String!
+      measurement: String!
+      quantity: Float!
+    }
+
+    input StepInput {
+      recipeId: String!
+      stepNumber: Int!
+      stepText: String!
+    }
+
+    input CommentInput {
+      recipeId: String!
+      commentText: String
+      commentAuthor: String
     }
 
     type Query {
@@ -62,14 +89,14 @@ const typeDefs = gql`
     type Mutation {
         addUser(firstName: String, lastName: String, email: String!, password: String): Auth
         login(email: String!, password: String!): Auth
-        addRecipe(recipeName: String!, description: String!, note: String): Recipe
-        addIngredient(recipeId: ID!, ingredientName: String!, measurement: String!, quantity: Int!): Recipe
-        addStep(recipeId: ID!, stepNumber: Int!, steptext: String!): Recipe
-        addComment(recipeId: ID!, commentText: String!): Recipe
-        removeRecipe(recipeId: ID!): Recipe
-        removeIngredient(recipeId: ID!, IngredientId: ID!): Recipe
-        removeStep(recipeId: ID!, stepId: ID!): Recipe
-        removeComment(recipeId: ID!, commentId: ID!): Recipe
+        addRecipe(RecipeInput: RecipeInput): Recipe
+        addIngredient(IngredientInput: IngredientInput): Recipe
+        addStep(StepInput: StepInput): Recipe
+        addComment(CommentInput: CommentInput): Recipe
+        // removeRecipe(recipeId: ID!): Recipe
+        // removeIngredient(recipeId: ID!, IngredientId: ID!): Recipe
+        // removeStep(recipeId: ID!, stepId: ID!): Recipe
+        // removeComment(recipeId: ID!, commentId: ID!): Recipe
     }
 `;
 

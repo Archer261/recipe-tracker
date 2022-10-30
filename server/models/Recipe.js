@@ -1,4 +1,7 @@
 const { Schema, model } = require('mongoose');
+const Ingredient = require('./Ingredient');
+const Step = require('./Step');
+const Comment = require('./Comment');
 
 const recipeSchema = new Schema({
     recipeName: {
@@ -21,24 +24,9 @@ const recipeSchema = new Schema({
     public: {
         type: Boolean,
     },
-    ingredients: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Ingredient',
-        },
-    ],
-    steps: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Step',
-        },
-    ],
-    comments: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Comment',
-        },
-    ],
+    ingredients: [Ingredient],
+    steps: [Step],
+    comments: [Comment],
 });
 
 const Recipe = model('Recipe', recipeSchema);
