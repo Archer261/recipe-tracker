@@ -51,10 +51,11 @@ function NewRecipeForm() {
                     )
                 })}
             </form>
-            <button className='btn btn-success text-white m-5' onClick={addFields}>Add Step</button>
-            <br />
-            <button className='btn btn-primary text-white m-5' onClick={submit}>Submit</button>
+            <div className='flex-col lg:flex-row'>
+                <button className='btn btn-success text-white m-5' onClick={addFields}>Add Step</button>
 
+                <button className='btn btn-primary text-white m-5' onClick={submit}>Submit</button>
+            </div>
 
             {/* <div className="divider lg:divider-horizontal"></div>
 
