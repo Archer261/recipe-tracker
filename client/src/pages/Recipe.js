@@ -11,8 +11,8 @@ function Recipe() {
 
     console.log(singleRecipe.steps)
     return (
-        <div class="bg-base-100 max-h-screen">
-            <div class="grid justify-items-stretch ...">
+        <div class="flex justify-center bg-base-100 max-h-screen">
+            <div class="container flex flex-col justify-items-stretch ...">
                 <div className="hero bg-primary">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />

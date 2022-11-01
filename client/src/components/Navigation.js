@@ -26,13 +26,13 @@ function Navigation() {
 
             {/* Hide this div on collapse */}
 
-            <div className="flex-row gap-2">
+            <div className="container flex flex-row gap-2 justify-end">
 
                 <Link to={`/myrecipes`}><button className="btn btn-primary text-white mr-3 hidden lg:block">My Recipies</button></Link>
                 <Link to={`/newrecipe`}><button className="btn btn-success text-white mr-3 hidden lg:block">New Recipe</button></Link>
 
                 {/* Profile Name */}
-                <h2 className='text-white hidden lg:block'>{profile.name}</h2>
+                <h2 className='text-white hidden lg:block'><span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ...">{profile.name}</span></h2>
 
 
                 <div className="dropdown dropdown-end hidden lg:block">
