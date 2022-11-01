@@ -7,9 +7,9 @@ function Profile() {
 
     return (
         <div class="bg-secondary">
-            <div className="artboard artboard-horizontal phone-2 drop-shadow-2xl">
-                <div className='flex flex-row px-10 py-20 w-screen justify-between'>
-                    <div className='flex flex-col mx-20 my-10 justify-center text-white pl-10'>
+            <div className="container flex flex-row drop-shadow-2xl">
+                <div className='container flex flex-row px-10 py-20 w-screen justify-between h-auto'>
+                    <div className='container flex flex-col mx-20 my-10 justify-center text-white pl-10'>
                         <img className="mask mask-squircle h-auto" src="https://placeimg.com/160/160/arch" />
                         <span>Name</span>
                         <span>Created Recipes: 50</span>
@@ -24,9 +24,14 @@ function Profile() {
                     </div>
                 </div>
             </div>
+
+
+
             <div className="divider"></div>
+
+
             <div class="grid justify-items-stretch ...">
-                <h1 className="justify-self-center text-3xl md:text-4xl font-medium mb-2 text-white">My Recipies</h1>
+                <h1 className="justify-self-center text-3xl md:text-4xl font-medium mb-2 text-white"><span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ...">My Recipies</span></h1>
             </div>
             <RecipeList />
             <div class="grid justify-items-stretch ...">
