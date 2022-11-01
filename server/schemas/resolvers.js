@@ -96,7 +96,6 @@ const resolvers = {
             return comments;
         },
     },
-
     Mutation: {
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
@@ -120,36 +119,21 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        // addRecipe: async (parent, { recipeName, description, note, ingredients, steps }, context) => {
-        //     if (context.user) {
-        //         const recipe = new Recipe({ recipeName, description, note, ingredients, steps });
-
-        //         await Recipe.create(recipe);
-
-        //         await User.findByIdAndUpdate(context.user._id, {
-        //             $push: { recipes: recipe },
-        //         });
-
-        //         return recipe;
-        //     }
-
-        //     throw new AuthenticationError('Not logged in');
-        // },
-        addRecipe: async (_, { RecipeInput: { recipeName, description, notes, public } }) => {
+        addRecipe: async (_, { RecipeInput: { recipeName, description, notes, public, ingredients, steps } }) => {
             const newRecipe = new Recipe({
                 recipeName,
                 description,
                 notes,
                 public,
+                ingredients,
+                steps,
             });
             await newRecipe.save();
             return newRecipe;
         },
         addIngredient: async (_, { IngredientInput: { recipeId, ingredientName, measurement, quantity } }) => {
             // find the recipe by id
-            console.log('here 1');
             const recipe = await Recipe.findById(recipeId);
-            console.log('here 2');
 
             // check if the transaction exists
             if (recipe) {
@@ -163,8 +147,6 @@ const resolvers = {
             } else throw new Error('recipe does not exist');
             await recipe.save();
             return recipe;
-            console.log('here 4');
-            console.log(recipe.ingredients[0]);
         },
         addStep: async (_, { StepInput: { recipeId, stepNumber, stepText } }) => {
             // find the recipe by id
@@ -178,6 +160,8 @@ const resolvers = {
                     stepText,
                 });
             } else throw new Error('recipe does not exist');
+            await recipe.save();
+            return recipe;
         },
         addComment: async (_, { CommentInput: { recipeId, commentText, commentAuthor } }) => {
             // find the recipe by id
@@ -191,45 +175,11 @@ const resolvers = {
                     commentAuthor,
                 });
             } else throw new Error('recipe does not exist');
+            await recipe.save();
+            return recipe;
         },
-        // addIngredient: async (parent, { recipeId, ingredientName, measurement, quantity }) => {
-        //     return Recipe.findOneAndUpdate(
-        //         { _id: recipeId },
-        //         {
-        //             $addToSet: { ingredients: { ingredientName, measurement, quantity } },
-        //         },
-        //         {
-        //             new: true,
-        //             runValidators: true,
-        //         }
-        //     );
-        // },
-        // addStep: async (parent, { recipeId, stepNumber, stepText }) => {
-        //     return Recipe.findOneAndUpdate(
-        //         { _id: recipeId },
-        //         {
-        //             $addToSet: { steps: { stepNumber, stepText } },
-        //         },
-        //         {
-        //             new: true,
-        //             runValidators: true,
-        //         }
-        //     );
-        // },
-        // addComment: async (parent, { recipeId, commentText }) => {
-        //     return Recipe.findOneAndUpdate(
-        //         { _id: recipeId },
-        //         {
-        //             $addToSet: { comments: { commentText } },
-        //         },
-        //         {
-        //             new: true,
-        //             runValidators: true,
-        //         }
-        //     );
-        // },
         removeRecipe: async (parent, { recipeId }) => {
-            return Recipe.findOneAndDelete({ _id: thoughtId });
+            return Recipe.findOneAndDelete({ _id: recipeId });
         },
         removeIngredient: async (parent, { recipeId, ingredientId }) => {
             return Recipe.findOneAndUpdate(

@@ -57,14 +57,14 @@ const typeDefs = gql`
     }
 
     input IngredientInput {
-        recipeId: String!
+        recipeId: String
         ingredientName: String!
         measurement: String!
         quantity: Float!
     }
 
     input StepInput {
-        recipeId: String!
+        recipeId: String
         stepNumber: Int!
         stepText: String!
     }
