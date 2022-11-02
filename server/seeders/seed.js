@@ -4,6 +4,7 @@ const { User, Recipe, Ingredient, Step, Comment } = require('../models');
 const recipeSeeds = require('./recipeSeeds');
 
 db.once('open', async () => {
+    await User.deleteMany({});
     await Ingredient.deleteMany({});
     await Step.deleteMany({});
     await Comment.deleteMany({});
