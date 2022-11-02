@@ -10,6 +10,7 @@ function Login() {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try {
+            console.log('here: ' + formState.email);
             const mutationResponse = await login({
                 variables: { email: formState.email, password: formState.password },
             });
@@ -53,7 +54,7 @@ function Login() {
             <input type="checkbox" id="my-modal-6" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <form onsubmit={handleFormSubmit}>
+                    <form onSubmit={handleFormSubmit}>
                         <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
                             <div className="mb-4">
                                 <div className="flex flex-row justify-between">
@@ -81,7 +82,8 @@ function Login() {
                                 <input
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                                     id="email"
-                                    type="text"
+                                    type="email"
+                                    name="email"
                                     placeholder="email"
                                     onChange={handleChange}
                                 />
@@ -94,6 +96,7 @@ function Login() {
                                     className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                                     id="password"
                                     type="password"
+                                    name="password"
                                     placeholder="******************"
                                     onChange={handleChange}
                                 />
