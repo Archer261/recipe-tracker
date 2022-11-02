@@ -75,8 +75,7 @@ const resolvers = {
             return recipe;
         },
         recipes: async () => {
-            const recipes = recipe
-                .find()
+            const recipes = Recipe.find()
                 .sort({ createdAt: -1 })
                 .populate('ingredients')
                 .populate('steps')
