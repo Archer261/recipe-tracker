@@ -7,7 +7,7 @@ function Home() {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">🍽️ Recipies Your Way!</h1>
+                    <h1 className="mb-5 text-5xl font-bold">🍽️ Recipes Your Way!</h1>
                     <p className="mb-5"></p>
                     {/* <div className='flex mx-5'> */}
                     <label for="my-modal-6" className="btn modal-button text-white bg-primary  mx-5">Log In</label>
