@@ -79,7 +79,7 @@ const typeDefs = gql`
         me: User
         users: [User]
         user(email: String!): User
-        recipes(username: String): [Recipe]
+        recipes(email: String): [Recipe]
         recipe(recipeId: ID!): Recipe
         ingredients: [Ingredient]
         steps: [Step]
