@@ -130,6 +130,17 @@ const resolvers = {
             await newRecipe.save();
             return newRecipe;
         },
+        putRecipe: async (_, { userId, recipeId }) => {
+            const user = await User.findById(userId);
+
+            if (user) {
+                const recipe = await Recipe.findById(recipeId);
+                user.recipes.push(recipe);
+
+                await user.save();
+                return user;
+            } else throw new Error('Cannot find user');
+        },
         addIngredient: async (_, { IngredientInput: { recipeId, ingredientName, measurement, quantity } }) => {
             // find the recipe by id
             const recipe = await Recipe.findById(recipeId);
