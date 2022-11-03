@@ -18,6 +18,7 @@ const typeDefs = gql`
         _id: ID
         recipeName: String!
         description: String
+        image: String
         notes: String
         rating: Int
         public: Boolean
@@ -29,8 +30,8 @@ const typeDefs = gql`
     type Ingredient {
         _id: ID
         ingredientName: String!
-        measurement: String!
-        quantity: Float!
+        measurement: String
+        quantity: Float
     }
 
     type Step {
@@ -48,6 +49,7 @@ const typeDefs = gql`
     input RecipeInput {
         recipeName: String!
         description: String
+        image: String
         notes: String
         rating: Int
         public: Boolean
@@ -59,8 +61,8 @@ const typeDefs = gql`
     input IngredientInput {
         recipeId: String
         ingredientName: String!
-        measurement: String!
-        quantity: Float!
+        measurement: String
+        quantity: Float
     }
 
     input StepInput {

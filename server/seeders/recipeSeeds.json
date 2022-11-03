@@ -1,18 +1,30 @@
 [
     {
-        "recipeName": "Baked Pork Chops",
+      "recipeName": "Baked Pork Chops",
         "description":
-            "These simple oven baked pork chops are coated in a seasoned breadcrumb mixture that isnt a big mess to prep, perfect for a weeknight dinner. Look for Japanese panko breadcrumbs which are coarse and crunchy. This recipe calls for Italian seasoning but feel empowered to change up the flavor with an herb and spice blend of your choice (just check the label to make sure there isnt added sodium): a peppercorn mix, or even pumpkin pie spice would work nicely. Or try adding finely chopped fresh herbs like parsley, tarragon and dill to the breading along with fresh lemon zest. You can even make the seasoned breadcrumbs ahead of time and store it in a plastic resealable bag in the freezer, just add the oil and then shake and bake your pork chops.",
-        "ingredients": [
+            "These simple oven baked pork chops are coated in a seasoned breadcrumb mixture that isnt a big mess to prep, perfect for a weeknight dinner. ",
+        "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/2/18/0/FNK_Baked-Pork-Chop_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1487435385846.jpeg",
+            "ingredients": [
             {
-                "ingredientName": "Panko",
-                "measurement": "cups",
-                "quantity": 1.5
+                "ingredientName": "1 1/2 cups panko"
             },
             {
-                "ingredientName": "bone-in pork chop",
-                "measurement": "pieces",
-                "quantity": 4
+                "ingredientName": "5 tablespoons vegetable oil"
+            },
+            {
+                "ingredientName": "3 tablespoons grated Parmesan"
+            },
+            {
+                "ingredientName": "2 teaspoons dried Italian seasoning"
+            },
+            {
+                "ingredientName": "Kosher salt and freshly ground black pepper"
+            },
+            {
+                "ingredientName": "Four 3/4-inch bone-in pork chops (about 2 1/4 pounds)"
+            },
+            {
+                "ingredientName": "Lemon wedges, for serving, optional"
             }
         ],
         "steps": [
@@ -24,7 +36,350 @@
                 "stepNumber": 2,
                 "stepText":
                     "Combine the panko, oil, Parmesan, Italian seasoning and 3/4 teaspoon each salt and pepper in a large resealable plastic bag. Put the pork chops in a large bowl and toss to coat with 1 tablespoon water. Place the pork chops in the bag and shake well to coat, pressing the breadcrumb mixture firmly into the meat."
-            }
+            },
+            {
+                "stepNumber": 3,
+                "stepText":
+                    "Place the pork chops on a wire rack set on a baking sheet and top evenly with any breadcrumbs remaining in the bag. Bake until the breadcrumbs are dark golden and the internal temperature of the chops registers 145 degrees F on an instant-read thermometer (avoid touching bone), 15 to 20 minutes."
+            },
+            {
+                "stepNumber": 4,
+                "stepText":
+                    "Serve immediately with lemon wedges if using."
+            }            
         ]
-    }
+    },
+    {
+      "recipeName": "Aglio e Olio",
+      "description":
+          "Spaghetti with Oil and Garlic",
+      "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/6/9/1/FN_Spaghetti-Squash-with-Parmesan_s4x3.jpg.rend.hgtvcom.826.620.suffix/1402569340139.jpeg",
+      "ingredients": [
+          {
+              "ingredientName": "Kosher Salt"
+          },
+          {
+              "ingredientName": "1 pound spaghetti"
+          },
+          {
+            "ingredientName": "3 cloves garlic, minced"
+          },
+          {
+            "ingredientName": "1/2 cup extra-virgin olive oil"
+          },
+          {
+            "ingredientName": "Pinch red pepper flakes"
+          },
+          {
+            "ingredientName": "2 tablespoons chopped flat-leaf parsley"
+          },
+          {
+            "ingredientName": "1/2 lemon, zested, optional"
+          },
+          {
+            "ingredientName": "Freshly grated Parmigiano-Reggiano, optional"
+          }
+      ],
+      "steps": [
+          {
+              "stepNumber": 1,
+              "stepText": "Bring a large pot of cold water to a boil over high heat, then salt it generously. Add the pasta and cook, stirring occasionally until al dente, tender but not mushy, about 8 minutes."
+          },
+          {
+              "stepNumber": 2,
+              "stepText":
+                  "While the pasta cooks, combine the garlic, olive oil, 1 teaspoon salt and the red pepper flakes in a large skillet and warm over low heat, stirring occasionally, until the garlic softens and turns golden, about 8 minutes."
+          },
+          {
+              "stepNumber": 3,
+              "stepText": "Drain the pasta in a colander set in the sink, reserving about a 1/4 cup of the cooking water. Add the pasta and the reserved water to the garlic mixture. Mix well. Add the parsley and lemon zest (if using). Adjust seasoning, to taste. Transfer to a large serving bowl or divide amongst 4 to 6 dishes. Serve topped with grated cheese, if desired."
+          }
+        ]
+  },
+  {
+    "recipeName": "Shrimp Scampi",
+    "description":
+        "Spaghetti with shrimp",
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/1/13/1/vday_shrimpscampi_4493_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1431856620923.jpeg",
+    "ingredients": [
+        {
+            "ingredientName": "1 pound linguini"
+        },
+        {
+            "ingredientName": "4 tablespoons butter"
+        },
+        {
+          "ingredientName": "4 tablespoons extra-virgin olive oil, plus more for drizzling"
+        },
+        {
+          "ingredientName": "2 shallots, finely diced"
+        },
+        {
+          "ingredientName": "2 cloves garlic, minced"
+        },
+        {
+          "ingredientName": "Pinch red pepper flakes, optional"
+        },
+        {
+          "ingredientName": "1 pound shrimp, peeled and deveined"
+        },
+        {
+          "ingredientName": "Kosher salt and freshly ground black pepper"
+        },
+        {
+          "ingredientName": "1/2 cup dry white wine"
+        },
+        {
+          "ingredientName": "Juice of 1 lemon"
+        },
+        {
+          "ingredientName": "1/4 cup finely chopped parsley leaves"
+        }
+    ],
+    "steps": [
+        {
+            "stepNumber": 1,
+            "stepText": "For the pasta, put a large pot of water on the stove to boil. When it has come to the boil, add a couple of tablespoons of salt and the linguini. Stir to make sure the pasta separates; cover. When the water returns to a boil, cook for about 6 to 8 minutes or until the pasta is not quite done. Drain the pasta."
+        },
+        {
+            "stepNumber": 2,
+            "stepText": "Meanwhile, in a large skillet, melt 2 tablespoons butter in 2 tablespoons olive oil over medium-high heat. Saute the shallots, garlic, and red pepper flakes (if using) until the shallots are translucent, about 3 to 4 minutes. Season the shrimp with salt and pepper; add them to the pan and cook until they have turned pink, about 2 to 3 minutes. Remove the shrimp from the pan; set aside and keep warm. Add wine and lemon juice and bring to a boil. Add 2 tablespoons butter and 2 tablespoons oil. When the butter has melted, return the shrimp to the pan along with the parsley and cooked pasta. Stir well and season with salt and pepper. Drizzle over a bit more olive oil and serve immediately."
+        }
+      ]
+  },
+  {
+    "recipeName": "Grilled Cheese",
+    "description":
+        "Classic grilled cheese sandwich",
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/2/18/1/FNK_Grilled-Cheese-Matrix_Opener_s4x3.jpg.rend.hgtvcom.826.620.suffix/1487436255211.jpeg",
+    "ingredients": [
+        {
+            "ingredientName": "2 ounces sliced melting cheese (about 2 slices), such as American, Cheddar, muenster, Havarti, Swiss, fontina, Mozzarella, Monterey jack, pepper jack, provolone"
+        },
+        {
+            "ingredientName": "2 slices bread, such as white, rye, brioche, sourdough, potato, whole wheat, pumpernickel"
+        },
+        {
+          "ingredientName": "1 tablespoon fat, such as mayonnaise, butter or olive, chili or coconut oil "
+        }
+    ],
+    "steps": [
+        {
+            "stepNumber": 1,
+            "stepText": "Oven method (great for a crowd of six or fewer): Put a rimmed baking sheet on the middle rack of the oven and preheat to 450 degrees F. Make one sandwich per person: Sandwich 2 slices of cheese between 2 slices of bread. Spread or brush the outside of the sandwich with 1 tablespoon of fat. Place on the preheated baking sheet and cook until the cheese starts to melt, about 5 minutes. Flip the sandwich and bake until golden brown, an additional 5 minutes."
+        },
+        {
+            "stepNumber": 2,
+            "stepText": "Skillet method (fool-proof and low-tech): Sandwich 2 slices of cheese between 2 slices of bread. Preheat a skillet over medium-low heat. Spread or brush the outside of the sandwich with 1 tablespoon of fat and cook until lightly browned, 3 to 4 minutes. Flip the sandwich, and continue cooking until browned and the cheese is melted, 3 to 4 minutes more."
+        }
+      ]
+  },
+  {
+    "recipeName": "Nachos",
+    "description":
+        "Corn chips and toppings",
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/1/25/0/PACE-SALSA_Quick-and-Easy-Dinner-Nachos-Supreme_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371591002440.jpeg",
+    "ingredients": [
+        {
+            "ingredientName": "1 pound ground beef"
+        },
+        {
+            "ingredientName": "1 package (about 1 ounce) taco seasoning mix"
+        },
+        {
+          "ingredientName": "1 can (10 3/4 ounces) condensed tomato soup"
+        },
+        {
+          "ingredientName": "1 1/2 cups water"
+        },
+        {
+          "ingredientName": "1 1/2 cups uncooked instant white rice"
+        },
+        {
+          "ingredientName": "8 ounces salsa"
+        },
+        {
+          "ingredientName": "Shredded Cheddar cheese"
+        },
+        {
+          "ingredientName": "Shredded lettuce"
+        },
+        {
+          "ingredientName": "Tortilla chips"
+        }
+    ],
+    "steps": [
+        {
+            "stepNumber": 1,
+            "stepText": "Cook the beef and taco seasoning in a 10-inch skillet until the beef is well browned, stirring often to separate meat. Pour off any fat."
+        },
+        {
+            "stepNumber": 2,
+            "stepText": "Stir the soup, water and rice in the skillet and heat to a boil. Reduce the heat to low. Cover and cook for 5 minutes or until the rice is tender."
+        },
+        {
+            "stepNumber": 3,
+            "stepText": "Top with the salsa, cheese and lettuce. Serve with the tortilla chips for dipping."
+        },
+        {
+            "stepNumber": 4,
+            "stepText": "Serving Suggestion: Serve with carrot and celery sticks. For dessert serve chunky applesauce sprinkled with cinnamon."
+        }
+      ]
+  },
+  {
+    "recipeName": "Griled Rib-Eye",
+    "description":
+        "Perfectly grilled steak",
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/26/0/FNM_060110-Bobby-Grilling-013_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382539247827.jpeg",
+    "ingredients": [
+        {
+            "ingredientName": "4 1 1/4-to-1 1/2-inch-thick boneless rib-eye (about 12 ounces each), trimmed"
+        },
+        {
+            "ingredientName": "2 tablespoons canola or extra-virgin olive oil"
+        },
+        {
+            "ingredientName": "Kosher salt and freshly ground pepper"
+        }
+    ],
+    "steps": [
+        {
+            "stepNumber": 1,
+            "stepText": "About 20 minutes before grilling, remove the steaks from the refrigerator and let sit, covered, at room temperature."
+        },
+        {
+            "stepNumber": 2,
+            "stepText": "Heat your grill to high. Brush the steaks on both sides with oil and season liberally with salt and pepper. Place the steaks on the grill and cook until golden brown and slightly charred, 4 to 5 minutes. Turn the steaks over and continue to grill 3 to 5 minutes for medium-rare (an internal temperature of 135 degrees F), 5 to 7 minutes for medium (140 degrees F) or 8 to 10 minutes for medium-well (150 degrees F)."
+        },
+        {
+            "stepNumber": 3,
+            "stepText": "Transfer the steaks to a cutting board or platter, tent loosely with foil and let rest 5 minutes before slicing."
+        }
+      ]
+  },
+  {
+    "recipeName": "Fried Chicken",
+    "description":
+        "Delicious deep fried chicken",
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/11/2/0/DV1510H_fried-chicken-recipe-10_s4x3.jpg.rend.hgtvcom.826.620.suffix/1568222255998.jpeg",
+    "ingredients": [
+        {
+            "ingredientName": "2 whole free-range, organic chickens"
+        },
+        {
+            "ingredientName": "Vegetable oil of choice, for frying the chicken"
+        },
+        {
+          "ingredientName": "6 cups all-purpose flour"
+        },
+        {
+          "ingredientName": "5 tablespoons salt"
+        },
+        {
+          "ingredientName": "4 tablespoons ground black pepper"
+        },
+        {
+          "ingredientName": "2 tablespoons garlic powder"
+        },
+        {
+          "ingredientName": "1 tablespoon onion powder"
+        },
+        {
+          "ingredientName": "2 teaspoons cayenne pepper"
+        },
+        {
+          "ingredientName": "2 cups buttermilk"
+        }
+    ],
+    "steps": [
+        {
+            "stepNumber": 1,
+            "stepText": "Cut the whole chickens into 4 breasts, 4 thighs, 4 legs and 4 wings and set aside."
+        },
+        {
+            "stepNumber": 2,
+            "stepText": "Preheat your oil, in either a heavy pan on the stove or a deep-fryer, to 325 degrees F."
+        },
+        {
+            "stepNumber": 3,
+            "stepText": "In a large bowl, combine the flour, salt, black pepper, garlic powder, onion powder and cayenne pepper until thoroughly mixed. Set aside."
+        },
+        {
+            "stepNumber": 4,
+            "stepText": "Pour the buttermilk into another bowl large enough for the chicken to be immersed in the buttermilk."
+        },
+        {
+            "stepNumber": 5,
+            "stepText": "Prepare your dredging station. Place your chicken in a bowl. Next to that, your bowl of buttermilk, and next to that, your dry mixture."
+        },
+        {
+            "stepNumber": 6,
+            "stepText": "Take your breasts, lightly dust them with your flour mixture, then dip them in the buttermilk until they are coated, and then place them in the flour mixture."
+        },
+        {
+            "stepNumber": 7,
+            "stepText": "Take the breasts that are in the flour mixture and aggressively push the flour mixture into the wet chicken. Make sure that the chicken in very thoroughly coated, or you will not achieve the crust and crunch you are looking for. Gently place the breasts in your hot oil."
+        },
+        {
+            "stepNumber": 8,
+            "stepText": "Next, repeat the dredging steps with your other pieces of chicken in this order: thigh, leg then wing."
+        },
+        {
+            "stepNumber": 9,
+            "stepText": "When you place the last wing into the fryer, you should have 16 pieces of chicken in the oil. Set a timer for 15 minutes."
+        },
+        {
+            "stepNumber": 10,
+            "stepText": "After 15 minutes, take a probe thermometer and check the temperature of a breast. If it reads 180 degrees F, all of your chicken is done. (Keep in mind that it will continue to cook after it has been removed from the fryer.)"
+        },
+        {
+            "stepNumber": 11,
+            "stepText": "Remove the chicken from the oil and let it drain for 5 minutes. Let cool for an additional 10 minutes before serving."
+        }
+      ]
+  },
+  {
+    "recipeName": "Caprese Salad",
+    "description":
+        "Mozzarella, Tomatoe, and balsamic ",
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/7/18/0/WU0314H_caprese-salad-recipe_s4x3.jpg.rend.hgtvcom.826.620.suffix/1530799895174.jpeg",
+    "ingredients": [
+        {
+            "ingredientName": "2 cups balsamic vinegar"
+        },
+        {
+            "ingredientName": "3 ripe tomatoes"
+        },
+        {
+          "ingredientName": "12 ounces fresh mozzarella, thickly sliced"
+        },
+        {
+          "ingredientName": "Large bunch fresh basil leaves"
+        },
+        {
+          "ingredientName": "Olive oil, for drizzling"
+        },
+        {
+          "ingredientName": "Large pinch kosher salt"
+        },
+        {
+          "ingredientName": "Large pinch freshly ground black pepper"
+        }
+    ],
+    "steps": [
+        {
+            "stepNumber": 1,
+            "stepText": "Measure the balsamic vinegar and pour into a saucepan. Bring it to a gentle boil over a low heat. Cook it until the balsamic vinegar has reduced to a nice thick glaze (but still pourable), about 15 minutes. Oh and one other thing, your house will stink. But it's a good kind of stink, it's a vinegary stink. Allow the reduction to cool to room temperature before you serve it."
+        },
+        {
+            "stepNumber": 2,
+            "stepText": "When you are ready to assemble the salad, cut the tomatoes into thick slices. Arrange them on a platter, alternating them with the mozzarella slices. Tuck the whole basil leaves in between the tomato and cheese slices."
+        },
+        {
+            "stepNumber": 3,
+            "stepText": "Drizzle on the gorgeous, almost black balsamic reduction. Then drizzle olive oil in a thin stream over the top. Finally, sprinkle on salt and pepper."
+        }
+      ]
+  }
 ]

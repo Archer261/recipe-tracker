@@ -10,7 +10,6 @@ const indgredientSchema = new Schema({
     },
     quantity: {
         type: Number,
-        required: true,
     },
     recipe: {
         type: Schema.Types.ObjectId,

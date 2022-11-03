@@ -13,7 +13,6 @@ const indgredientSchema = new Schema({
     },
     quantity: {
         type: Number,
-        required: true,
     },
 });
 

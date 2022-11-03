@@ -30,8 +30,8 @@ const resolvers = {
             }
             throw new AuthenticationError('Not logged in');
         },
-        user: async (parent, { _id }) => {
-            const user = User.findOne({ _id }).populate({
+        user: async (parent, { email }) => {
+            const user = User.findOne({ email }).populate({
                 path: 'recipes',
                 model: 'Recipe',
                 populate: {
@@ -122,6 +122,7 @@ const resolvers = {
             const newRecipe = new Recipe({
                 recipeName,
                 description,
+                image,
                 notes,
                 public,
                 ingredients,
