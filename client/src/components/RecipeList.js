@@ -28,28 +28,27 @@ function RecipeList() {
     var location = window.location.href
 
     if (window.location.href.endsWith('/myrecipes')) {
-        location = <div className='flex flex-wrap justify-center'>
-            {data.recipes.map((ele) => (
-                <RecipeCard rec={ele} />
-            )
-            )}
-        </div>;
+        return (
+            <div className='flex flex-wrap justify-center'>
+                {data.recipes.map((ele) => (
+                    <RecipeCard rec={ele} />
+                )
+                )}
+            </div>
+        )
     } else {
-        location = <div className='flex flex-wrap justify-center'>
-            {data.recipes.slice(0, 8).map((ele) => (
-                <RecipeCard rec={ele} />
-            )
-            )}
-        </div>;
+        return (
+            <div className='flex flex-wrap justify-center'>
+                {data.recipes.slice(0, 8).map((ele) => (
+                    <RecipeCard rec={ele} />
+                )
+                )}
+            </div>
+        );
     }
 
 
-    return (
-        <>
-            {location}
-        </>
-
-    );
+    ;
 }
 
 export default RecipeList;

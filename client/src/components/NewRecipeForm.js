@@ -56,29 +56,6 @@ function NewRecipeForm() {
 
                 <button className='btn btn-primary text-white m-5' onClick={submit}>Submit</button>
             </div>
-
-            {/* <div className="divider lg:divider-horizontal"></div>
-
-
-
-            <form onSubmit={submit}>
-                {formFields.map((form, index) => {
-                    return (
-                        <div key={index}>
-                            <input className='input input-bordered input-xs w-full max-w-xs m-5 bg-white'
-                                name='name'
-                                placeholder='Enter instructions'
-                                onChange={event => handleFormChange(event, index)}
-                                value={form.name}
-                            />
-                            <button className='btn btn-error' onClick={() => removeFields(index)}>Remove</button>
-                        </div>
-                    )
-                })}
-            </form>
-            <button className='btn btn-success text-white m-5' onClick={addFields}>Add Step</button>
-            <br />
-            <button className='btn btn-primary text-white m-5' onClick={submit}>Submit</button> */}
         </div>
     );
 }
