@@ -113,7 +113,7 @@ export const REMOVE_INGREDIENT = gql`
     }
 `;
 
-export const REMOVE_Step = gql`
+export const REMOVE_STEP = gql`
     mutation removeStep($recipeId: ID!, $stepId: ID!) {
         removeStep(recipeId: $recipeId, stepId: $stepId) {
             _id
