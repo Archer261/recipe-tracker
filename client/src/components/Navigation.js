@@ -28,13 +28,16 @@ function Navigation() {
             {/* Hide this div on collapse */}
 
             <div className="container flex flex-row gap-2 justify-end">
-                <Link to={`/myrecipes`}>
-                    <button className="btn btn-primary text-white mr-3 hidden lg:block">My Recipies</button>
-                </Link>
-                <Link to={`/newrecipe`}>
-                    <button className="btn btn-success text-white mr-3 hidden lg:block">New Recipe</button>
-                </Link>
-
+                {Auth.loggedIn() ? (
+                    <>
+                        <Link to={`/myrecipes`}>
+                            <button className="btn btn-primary text-white mr-3 hidden lg:block">My Recipies</button>
+                        </Link>
+                        <Link to={`/newrecipe`}>
+                            <button className="btn btn-success text-white mr-3 hidden lg:block">New Recipe</button>
+                        </Link>
+                    </>
+                ) : (<></>)}
                 {/* Profile Name */}
                 <h2 className="text-white hidden lg:block">
                     <span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ...">
@@ -116,20 +119,13 @@ function Navigation() {
                             <Link to={`/myrecipes`}>My Recipes</Link>
                         </a>
                     </li>
-                    <li className="">
+                    <li>
                         <a>
                             <Link to={`/profile`}>Profile</Link>
                         </a>
                     </li>
                 </ul>
             </div>
-
-            {/* <div className="flex-none lg:hidden">
-                <label tabIndex={0} htmlFor="my-drawer-4" className="btn btn-square btn-ghost">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </label>
-            </div>
-             */}
         </div>
     );
 }

@@ -9,6 +9,7 @@ function Login() {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+
         try {
             console.log('here: ' + formState.email);
             const mutationResponse = await login({
@@ -16,6 +17,8 @@ function Login() {
             });
             const token = mutationResponse.data.login.token;
             Auth.login(token);
+
+            localStorage.setItem('userName', formState.email);
         } catch (e) {
             console.log(e);
         }
@@ -31,25 +34,6 @@ function Login() {
 
     return (
         <>
-            {/* <input type="checkbox" id="my-modal-6" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h2 class="font-bold text-lg">Log In</h2>
-                    <div class="form-control w-full max-w-xs">
-                        <label class="label">
-                            <span class="label-text">Username</span>
-                        </label>
-                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                        <label class="label">
-                            <span class="label-text">Password</span>
-                        </label>
-                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                    </div>
-                    <div class="modal-action">
-                        <label for="my-modal-6" class="btn">Submit</label>
-                    </div>
-                </div>
-            </div> */}
 
             <input type="checkbox" id="my-modal-6" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
@@ -84,7 +68,7 @@ function Login() {
                                     id="email"
                                     type="email"
                                     name="email"
-                                    placeholder="email"
+                                    placeholder="Enter your email"
                                     onChange={handleChange}
                                 />
                             </div>
