@@ -55,7 +55,7 @@ function SignUp() {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text">First Name</span>
                             </label>
                             <input
                                 type="firstName"
@@ -65,7 +65,7 @@ function SignUp() {
                                 onChange={handleChange}
                             />
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text">Last Name</span>
                             </label>
                             <input
                                 type="lastName"
