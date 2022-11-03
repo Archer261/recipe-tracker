@@ -5,12 +5,6 @@ import FileUpload from '../components/FileUpload';
 import SampleCard from '../components/SampleCard';
 import NewRecipeForm from '../components/NewRecipeForm';
 
-
-
-
-
-
-
 function NewRecipe() {
     const navigate = useNavigate();
 
@@ -24,39 +18,14 @@ function NewRecipe() {
     };
 
     return (
-        <>
+        <div className='container flex flex-col py-10'>
             <div class="grid justify-items-stretch my-5 ...">
                 <h1 className='justify-self-center text-3xl md:text-4xl font-medium mb-2 text-white'>Create New Recipe</h1>
             </div>
             <div className='flex flex-col mx-5 my-5'>
 
 
-                <div class="form-control shadow-2xl p-10  bg-gradient-to-l from-indigo-500 rounded-md">
-                    <div className='flex flex-col justify-between mx-10 items-center lg:flex-row'>
-                        <div className='flex flex-col shadow-2x p-10 w-full'>
-                            <label className="input-group input-group-sm my-2 text-white">
-                                <span>Recipe Name</span>
-                                <input type="text" placeholder="Type here" className="input input-bordered input-sm w-full max-w-xs my-2 bg-white" />
-                            </label>
 
-                            <label className="input-group input-group-sm my-2 text-white">
-                                <span>Description</span>
-                                <input type="text" placeholder="Type here" className="input input-bordered input-sm w-full max-w-xs my-2 bg-white" />
-                            </label>
-
-                            <FileUpload />
-                        </div>
-                        <SampleCard />
-                    </div>
-                    <div class="flex justify-between lg:hidden ...">
-                        <button class="btn btn-lg bg-base-100 m-10" onClick={() => navigate(-1)}>Cancel</button>
-                        <button class="btn btn-lg bg-base-100 m-10">Save</button>
-                    </div>
-                </div>
-
-
-
-                <div className="divider"></div>
 
 
                 <NewRecipeForm />
@@ -67,7 +36,7 @@ function NewRecipe() {
                 </div>
 
             </div>
-        </>
+        </div>
     );
 }
 

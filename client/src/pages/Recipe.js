@@ -9,11 +9,11 @@ const singleRecipe = {
 
 function Recipe() {
 
-    console.log(singleRecipe.steps)
+
     return (
-        <div class="flex justify-center bg-base-100 max-h-screen">
+        <div class="flex justify-center bg-base-100 max-h-screen py-10">
             <div class="container flex flex-col justify-items-stretch ...">
-                <div className="hero bg-primary">
+                <div className="hero bg-secondary rounded-2xl">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
@@ -35,7 +35,7 @@ function Recipe() {
                     <div className='w-1/2 bg-base-200 h-12 m-5'>
                         <h2 className='text-2xl'>Steps:</h2>
                         <div className="divider bg-base-100"></div>
-                        <ol role="list" class='marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400'>
+                        <ol role="list" class='list-decimal marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400'>
                             <Step stps={singleRecipe.steps} />
                         </ol>
                     </div>
