@@ -55,6 +55,8 @@ const recipeSchema = new Schema({
     },
     image: {
         type: String,
+        default:
+            'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/01/31/0/FNK_ONEPOT_LEMON_RICOTTA_SPAGHETTONI_H_f_s4x3.jpg.rend.hgtvcom.266.200.suffix/1643665133276.jpeg',
     },
     notes: {
         type: String,
