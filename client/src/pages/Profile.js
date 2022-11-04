@@ -7,23 +7,23 @@ function Profile() {
 
     return (
         <div class="bg-secondary">
-            <div className="container flex flex-row drop-shadow-2xl">
-                <div className='container flex flex-row px-10 py-20 w-screen justify-between h-auto'>
-                    <div className='container flex flex-col mx-20 my-10 justify-center text-white pl-10'>
-                        <img className="mask mask-squircle h-auto" src="https://placeimg.com/160/160/arch" />
-                        <span>Name</span>
-                        <span>Created Recipes: 50</span>
-                        <span>Saved Recipes: 50</span>
-                    </div>
-                    <div className="card w-full bg-base-100 shadow-xl mx-20 ">
-                        <div className="card-body">
-                            <h2 className="card-title">Bio:</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
+            {/* <div className="container flex flex-row drop-shadow-2xl"> */}
+            <div className='container flex lg:flex-row px-10 py-20 w-min lg:w-screen justify-center lg:justify-around h-auto lg:h-content'>
+                <div className='container flex flex-col max-w-min lg:mx-20 my-10 justify-center text-white pl-10'>
+                    <img className="mask mask-squircle h-auto max-w-fit" src="https://placeimg.com/160/160/arch" />
+                    <span>Name</span>
+                    <span>Created Recipes: 50</span>
+                    <span>Saved Recipes: 50</span>
+                </div>
+                <div className="container max-w-sm h-auto bg-base-100 shadow-xl lg:mx-20 rounded-lg ">
+                    <div className="card-body">
+                        <h2 className="card-title">Bio:</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
 
-                        </div>
                     </div>
                 </div>
             </div>
+            {/* </div> */}
 
 
 
