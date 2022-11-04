@@ -45,6 +45,7 @@ const recipeSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'user',
     },
+    userEmail: { type: String },
     recipeName: {
         type: String,
         required: true,
