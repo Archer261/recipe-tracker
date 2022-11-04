@@ -20,9 +20,7 @@ function NewRecipeForm() {
     }
 
     const addFields = () => {
-        let recipe = {
-            recipeName: '',
-            description: '',
+        let object = {
             step: '',
             value: ''
         }
@@ -35,6 +33,17 @@ function NewRecipeForm() {
         data.splice(index, 1)
         setFormFields(data)
     }
+
+    const navigate = useNavigate();
+
+    let recObj = {}
+
+    const [counter, setCounter] = useState(0);
+
+    const handleClick = () => {
+        setCounter(counter + 1);
+        console.log(counter);
+    };
 
     return (
 
@@ -91,6 +100,11 @@ function NewRecipeForm() {
 
                 <button className='btn btn-primary text-white m-5' onClick={submit}>Submit</button>
             </div>
+            <div class="flex justify-between hidden lg:flex ...">
+                <button class="btn btn-lg bg-primary-focus m-10" onClick={() => navigate(-1)}>Cancel</button>
+                <button class="btn btn-lg bg-primary-focus m-10">Save</button>
+            </div>
+
         </div>
     );
 }

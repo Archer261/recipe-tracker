@@ -1,13 +1,29 @@
 import React from 'react'
 import Ingredient from '../components/Ingredient';
 import Step from '../components/Step';
+import { useParams } from 'react-router-dom';
+import { QUERY_RECIPE } from '../utils/queries';
+import { useQuery } from '@apollo/client';
+
+
+
 
 const singleRecipe = {
     recipe: 'spaghetti', id: 1, steps: ["Make the food", "Eat food"]
     , ingredients: ["Pasta", "Sauce", "Ground Beef", "Salt", "Pepper"]
 };
 
+
+
 function Recipe() {
+    // const { id } = useParams();
+    // console.log(id)
+
+    // const { data, isLoading } = useQuery(QUERY_RECIPE, {
+    //     variables: id
+    // });
+
+    // if (data) {
 
 
     return (
@@ -56,5 +72,6 @@ function Recipe() {
         </div>
     );
 }
+// }
 
 export default Recipe;

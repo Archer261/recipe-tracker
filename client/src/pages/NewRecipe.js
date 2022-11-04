@@ -6,16 +6,7 @@ import SampleCard from '../components/SampleCard';
 import NewRecipeForm from '../components/NewRecipeForm';
 
 function NewRecipe() {
-    const navigate = useNavigate();
 
-    let recObj = {}
-
-    const [counter, setCounter] = useState(0);
-
-    const handleClick = () => {
-        setCounter(counter + 1);
-        console.log(counter);
-    };
 
     return (
         <div className='container flex flex-col py-10'>
@@ -24,16 +15,8 @@ function NewRecipe() {
             </div>
             <div className='flex flex-col mx-5 my-5'>
 
-
-
-
-
                 <NewRecipeForm />
 
-                <div class="flex justify-between hidden lg:flex ...">
-                    <button class="btn btn-lg bg-primary-focus m-10" onClick={() => navigate(-1)}>Cancel</button>
-                    <button class="btn btn-lg bg-primary-focus m-10">Save</button>
-                </div>
 
             </div>
         </div>
