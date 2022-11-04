@@ -6,6 +6,14 @@ import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 
 function Login() {
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
+
 
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN);
@@ -22,7 +30,6 @@ function Login() {
             Auth.login(token);
 
             localStorage.setItem('userName', formState.email);
-
 
         } catch (e) {
             console.log(e);
@@ -45,13 +52,6 @@ function Login() {
 
 
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormState({
-            ...formState,
-            [name]: value,
-        });
-    };
 
     return (
         <>
