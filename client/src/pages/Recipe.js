@@ -23,6 +23,8 @@ function Recipe() {
     //     variables: id
     // });
 
+    // console.log(data)
+
     // if (data) {
 
 

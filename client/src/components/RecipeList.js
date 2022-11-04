@@ -5,12 +5,17 @@ import { QUERY_RECIPES } from '../utils/queries';
 
 function RecipeList() {
 
-    // Grab all recipes related to the user
-    const { data, isLoading } = useQuery(QUERY_RECIPES);
+    // var userName = localStorage.getItem('userName')
 
-    if (data === undefined) {
+    // Grab all recipes related to the user
+    const { data, isLoading } = useQuery(QUERY_RECIPES, {
+        variables: { userEmail: localStorage.getItem('userName') }
+    });
+
+
+
+    if (data === undefined)
         return console.log("this is a test")
-    }
 
     // Check the current URL, if we are on the /myrecipes page, render all recipes, othwise, render only 5
     var location = window.location.href
@@ -18,7 +23,7 @@ function RecipeList() {
     if (window.location.href.endsWith('/myrecipes')) {
         return (
             <div className='flex flex-wrap justify-center'>
-                {data.recipes.map((ele) => (
+                {data.myRecipes.map((ele) => (
                     <RecipeCard rec={ele} />
                 )
                 )}
@@ -27,7 +32,7 @@ function RecipeList() {
     } else {
         return (
             <div className='flex flex-wrap justify-center'>
-                {data.recipes.slice(0, 8).map((ele) => (
+                {data.myRecipes.slice(0, 8).map((ele) => (
                     <RecipeCard rec={ele} />
                 )
                 )}
