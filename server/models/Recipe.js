@@ -41,6 +41,10 @@ const commentSchema = new Schema({
 });
 
 const recipeSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'user',
+    },
     recipeName: {
         type: String,
         required: true,
