@@ -8,9 +8,11 @@ function RecipeCard({ rec }) {
         console.log(newRating);
     };
 
+
+
     return (
         <div className="card card-compact w-96 bg-base-100 drop-shadow-2xl m-3">
-            <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+            <figure><img src={rec.image} alt="Shoes" /></figure>
             <div className="card-body h-auto">
                 <h2 className="card-title">{rec.recipeName}</h2>
                 <div className='pb-2'>
