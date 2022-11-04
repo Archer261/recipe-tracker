@@ -14,6 +14,7 @@ db.once('open', async () => {
 
     for await (const doc of Recipe.find()) {
         doc.user = frank._id;
+        doc.userEmail = frank.email;
         doc.save();
     }
 

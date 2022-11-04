@@ -63,12 +63,11 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_RECIPES = gql`
-    query getRecipes {
-        recipes {
+    query getRecipes($userEmail: String!) {
+        myRecipes(userEmail: $userEmail) {
             _id
             recipeName
             description
-            image
             notes
             rating
             ingredients {
