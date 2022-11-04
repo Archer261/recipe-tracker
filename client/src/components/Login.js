@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import { useQuery } from '@apollo/client';
+import { QUERY_USER } from '../utils/queries';
 
 function Login() {
+
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN);
 
@@ -19,10 +22,28 @@ function Login() {
             Auth.login(token);
 
             localStorage.setItem('userName', formState.email);
+
+
         } catch (e) {
             console.log(e);
         }
     };
+
+    const userName = localStorage.getItem('userName')
+
+    // const { data, isLoading } = useQuery(QUERY_USER, {
+    //     variables: userName
+    // })
+
+    // if (data === undefined) {
+    //     return console.log("Test: " + data)
+    // }
+
+    // if (data) {
+    //     return console.log(data)
+    // }
+
+
 
     const handleChange = (event) => {
         const { name, value } = event.target;

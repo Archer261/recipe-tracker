@@ -12,13 +12,13 @@ const navigateHome = () => {
 };
 
 const profile = {
-    name: 'Dustin T.',
+    name: localStorage.getItem('userName'),
     id: 1,
 };
 
 function Navigation() {
     return (
-        <div className="navbar bg-base-100 w-full flex flex-row gap-x-2 justify-evenly py-1 drop-shadow-md-top">
+        <div className="navbar bg-base-100 w-screen flex flex-row gap-x-2 justify-evenly py-1 drop-shadow-md-top">
             <div className="flex-1">
                 <a className="btn btn-ghost normal-case text-xl text-white">
                     <Link to={`/`}>🍽️ Recipe Tracker</Link>
@@ -38,9 +38,10 @@ function Navigation() {
                         </Link>
                     </>
                 ) : (<></>)}
+
                 {/* Profile Name */}
                 <h2 className="text-white hidden lg:block">
-                    <span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ...">
+                    <span class="rounded-lg box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ...">
                         {profile.name}
                     </span>
                 </h2>

@@ -18,10 +18,10 @@ const client = new ApolloClient({
 function App() {
     return (
         <ApolloProvider client={client}>
-            <div class="flex flex-col h-screen justify-between align-center font-bold">
+            <div class="">
                 <BrowserRouter>
                     <Header />
-                    <div className="relative my-10">
+                    <div className="flex justify-center py-10">
                         {/* <AddNewBtn /> */}
                         <Routes>
                             <Route path="/" element={<Home />} />
