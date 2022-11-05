@@ -43,9 +43,9 @@ function Recipe() {
 
                 <div className="flex bg-base-100 max-h-full">
                     {/* Steps */}
-                    <div className='w-1/2 bg-base-100 h-12 m-5'>
+                    <div className='w-1/2 bg-base-100 h-12 m-5 '>
                         <div className="divider bg-base-100"><h2 className='text-2xl bg-secondary rounded-lg p-5'>Steps:</h2></div>
-                        <ol role="list" class='list-decimal marker:text-sky-400 pl-5 space-y-3 text-slate-400 my-20 overflow-y-auto touch-auto h-40 lg:h-auto'>
+                        <ol role="list" class='list-decimal marker:text-sky-400 pl-5 space-y-3 text-slate-400 my-20 overflow-y-auto touch-auto h-40 lg:h-auto divide-y divide-blue-200'>
                             <Step stps={data.recipe.steps} />
                         </ol>
                     </div>
@@ -55,7 +55,7 @@ function Recipe() {
                     {/* Ingredients */}
                     <div className='w-1/2 bg-base-100 h-12 m-5'>
                         <div className="divider bg-base-100"><h2 className='text-2xl bg-secondary rounded-lg p-5'>Ingredients:</h2></div>
-                        <ul role="list" class="list-disc marker:text-sky-400  pl-5 space-y-3 text-slate-400 my-20 overflow-y-auto touch-auto h-40 lg:h-auto ">
+                        <ul role="list" class="list-disc marker:text-sky-400  pl-5 space-y-3 text-slate-400 my-20 overflow-y-auto touch-auto h-40 lg:h-auto divide-y divide-blue-200">
                             <Ingredient ings={data.recipe.ingredients} />
                         </ul>
                     </div>

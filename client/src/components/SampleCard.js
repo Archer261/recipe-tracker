@@ -11,7 +11,7 @@ function SampleCard({ rec }) {
             </div>
             <div className="card card-compact w-96 bg-base-100 drop-shadow-2xl m-3">
 
-                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                <figure><img src="https://i.picsum.photos/id/488/1772/1181.jpg?hmac=psl3qLyDefO6AYqU4TJQ8PNCjS8RdPiP_vRLB8WPVjY" alt="Food" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{rec.recipeName}</h2>
                     <p></p>
