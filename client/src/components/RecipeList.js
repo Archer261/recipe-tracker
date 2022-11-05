@@ -27,7 +27,7 @@ function RecipeList() {
     } else {
         return (
             <div className="flex flex-wrap justify-center">
-                {data.myRecipes.slice(0, 8).map((ele) => (
+                {data.myRecipes.slice(0, 3).map((ele) => (
                     <RecipeCard rec={ele} />
                 ))}
             </div>
