@@ -5,7 +5,7 @@ function Ingredient({ ings }) {
     return (
         <>
             {ings.map((ele) => (
-                <li>
+                <li className='pt-2'>
                     {ele.ingredientName}
                 </li>
             )

@@ -107,7 +107,7 @@ function NewRecipeForm() {
     return (
         <div className="NewRecipeForm">
             <form>
-                <div class="form-control shadow-2xl p-10  bg-gradient-to-l from-indigo-500 rounded-md">
+                <div class="form-control shadow-2xl p-10  bg-indigo-500 rounded-md">
                     <div className="flex flex-col justify-between mx-10 items-center lg:flex-row">
                         <div className="flex flex-col shadow-2x p-10 w-full">
                             <label className="input-group input-group-sm my-2 text-white">
@@ -138,7 +138,7 @@ function NewRecipeForm() {
             </form>
             <div className="divider"></div>
 
-            <div className="container flex flex-row justify-between">
+            <div className="container flex flex-row justify-between ml-10">
                 <div className="flex-1 flex-col">
                     <div class="container">
                         <h2 className="justify-self-start px-6 text-xl">Steps</h2>

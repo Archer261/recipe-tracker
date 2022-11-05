@@ -9,7 +9,7 @@ function NewRecipe() {
 
 
     return (
-        <div className='container flex flex-col py-10'>
+        <div className='container flex flex-col py-10 bg-base-content'>
             <div class="grid justify-items-stretch my-5 ...">
                 <h1 className='justify-self-center text-3xl md:text-4xl font-medium mb-2 text-white'>Create New Recipe</h1>
             </div>
