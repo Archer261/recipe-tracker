@@ -6,7 +6,7 @@ function Ingredient({ ings }) {
         <>
             {ings.map((ele) => (
                 <li>
-                    {ele}
+                    {ele.ingredientName}
                 </li>
             )
             )
