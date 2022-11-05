@@ -5,15 +5,17 @@ import { Link } from 'react-router-dom';
 
 function Profile() {
 
+    const userName = localStorage.getItem('userName')
+
     return (
         <div class="bg-secondary">
-            {/* <div className="container flex flex-row drop-shadow-2xl"> */}
             <div className='container flex lg:flex-row px-10 py-20 w-min lg:w-screen justify-center lg:justify-around h-auto lg:h-content'>
                 <div className='container flex flex-col max-w-min lg:mx-20 my-10 justify-center text-white pl-10'>
                     <img className="mask mask-squircle h-auto max-w-fit" src="https://placeimg.com/160/160/arch" />
-                    <span>Name</span>
-                    <span>Created Recipes: 50</span>
-                    <span>Saved Recipes: 50</span>
+                    <div className='container flex flex-col my-2 w-full bg-primary'>
+                        <span className='w-auto'>Username: {userName}</span>
+                        <span className='w-auto'>Number of Recipes: 5</span>
+                    </div>
                 </div>
                 <div className="container max-w-sm h-auto bg-base-100 shadow-xl lg:mx-20 rounded-lg ">
                     <div className="card-body">
@@ -23,7 +25,6 @@ function Profile() {
                     </div>
                 </div>
             </div>
-            {/* </div> */}
 
 
 

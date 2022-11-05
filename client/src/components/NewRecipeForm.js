@@ -90,30 +90,24 @@ function NewRecipeForm() {
 
 
     // Handle submission
-    const [addRecipe, { data, loading, error }] = useMutation(ADD_RECIPE, {
+    const [addRecipe, { data, isLoading, error }] = useMutation(ADD_RECIPE, {
         variables: {
             RecipeInput: formFields
         }
     });
-    if (loading) return 'submitting'
-    if (error) return "e"
 
 
-
-
-
-    // let input;
-    // const [addRecipe, { data, loading, error }] = useMutation(ADD_RECIPE);
-    // if (loading) return 'Submitting...';
-    // if (error) return `Submission error! ${error.message}`;
-
-    console.log(formFields)
-
+    if (data === undefined) {
+        console.log("test")
+    }
     return (
 
         <div className="NewRecipeForm">
 
-            <form>
+            <form className="formInput" onSubmit={(e) => {
+                e.preventDefault();
+                addRecipe({ variables: { ingredients: { ingValues } } });
+            }}>
                 <div class="form-control shadow-2xl p-10  bg-gradient-to-l from-indigo-500 rounded-md">
                     <div className='flex flex-col justify-between mx-10 items-center lg:flex-row'>
                         <div className='flex flex-col shadow-2x p-10 w-full'>
@@ -134,7 +128,7 @@ function NewRecipeForm() {
 
                 </div>
 
-
+                <button type="submit">Save</button>
             </form>
             <div className="divider"></div>
 
@@ -207,7 +201,7 @@ function NewRecipeForm() {
                 <button class="btn btn-lg bg-primary-focus m-10" onClick={() => navigate(-1)}>Cancel</button>
                 <button type="submit" class="btn btn-lg bg-primary-focus m-10" onClick={e => {
                     e.preventDefault();
-                    addRecipe({ variables: { RecipeInput: formFields } });
+                    addRecipe({ variables: { recipeName: this.recipeName } });
                 }}>Save</button>
             </div>
 
