@@ -145,7 +145,9 @@ function NewRecipeForm() {
                         {stepValues.map((element, index) => {
                             return (
                                 <div className="form-inline" key={index}>
-                                    <label className="input-group input-group-sm my-2 text-white">Step {index}</label>
+                                    <label className="input-group input-group-sm my-2 text-white">
+                                        Step {index + 1}
+                                    </label>
                                     <input
                                         type="text"
                                         name="stepText"
