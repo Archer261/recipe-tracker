@@ -71,7 +71,7 @@ const resolvers = {
             return users;
         },
         recipe: async (parent, { _id }) => {
-            const recipe = recipe.findOne({ _id }).populate('ingredients').populate('steps').populate('comments');
+            const recipe = Recipe.findOne({ _id }).populate('ingredients').populate('steps').populate('comments');
             return recipe;
         },
         myRecipes: async (parent, { userEmail }) => {
