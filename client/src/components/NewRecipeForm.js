@@ -153,7 +153,7 @@ function NewRecipeForm() {
                                     <input
                                         type="text"
                                         name="stepText"
-                                        className="input input-bordered input-warning w-full max-w-xs bg-white"
+                                        className="input input-bordered input-warning w-full max-w-xs bg-white text-black"
                                         value={element.stepText || ''}
                                         onChange={(e) => handleStepChange(index, e)}
                                     />
@@ -192,7 +192,7 @@ function NewRecipeForm() {
                                     <input
                                         type="text"
                                         name="ingredientName"
-                                        className="input input-bordered input-warning w-full max-w-xs bg-white"
+                                        className="input input-bordered input-warning w-full max-w-xs bg-white text-black"
                                         value={element.ingredientName || ''}
                                         onChange={(e) => handleIngChange(index, e)}
                                     />
@@ -227,6 +227,7 @@ function NewRecipeForm() {
                     onClick={(e) => {
                         e.preventDefault();
                         addRecipe({ variables: { RecipeInput: formFields } });
+                        window.location.href = '/myrecipes'
                     }}
                 >
                     Save

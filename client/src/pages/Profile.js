@@ -20,7 +20,7 @@ function Profile() {
                 <div className="container max-w-sm h-auto bg-base-100 shadow-xl lg:mx-20 rounded-lg ">
                     <div className="card-body">
                         <h2 className="card-title">Bio:</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>I enjoy discovering new recipes and putting my own spin on them.</p>
 
                     </div>
                 </div>
