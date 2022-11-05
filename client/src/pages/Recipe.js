@@ -26,7 +26,7 @@ function Recipe() {
             <div class="container flex flex-col justify-items-stretch ...">
                 <div className="hero bg-secondary rounded-2xl">
                     <div className="hero-content flex-col lg:flex-row">
-                        <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+                        <img src={data.recipe.image} className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
                             <h1 className="text-5xl font-bold">{data.recipe.recipeName}</h1>
                             <p className="py-6">{data.recipe.description}</p>
@@ -45,7 +45,7 @@ function Recipe() {
                     {/* Steps */}
                     <div className='w-1/2 bg-base-100 h-12 m-5'>
                         <div className="divider bg-base-100"><h2 className='text-2xl bg-secondary rounded-lg p-5'>Steps:</h2></div>
-                        <ol role="list" class='list-decimal marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400 my-20'>
+                        <ol role="list" class='list-decimal marker:text-sky-400 pl-5 space-y-3 text-slate-400 my-20 overflow-y-auto touch-auto h-40 lg:h-auto'>
                             <Step stps={data.recipe.steps} />
                         </ol>
                     </div>
@@ -55,7 +55,7 @@ function Recipe() {
                     {/* Ingredients */}
                     <div className='w-1/2 bg-base-100 h-12 m-5'>
                         <div className="divider bg-base-100"><h2 className='text-2xl bg-secondary rounded-lg p-5'>Ingredients:</h2></div>
-                        <ul role="list" class="list-disc marker:text-sky-400  pl-5 space-y-3 text-slate-400 my-20">
+                        <ul role="list" class="list-disc marker:text-sky-400  pl-5 space-y-3 text-slate-400 my-20 overflow-y-auto touch-auto h-40 lg:h-auto ">
                             <Ingredient ings={data.recipe.ingredients} />
                         </ul>
                     </div>
