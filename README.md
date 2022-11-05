@@ -51,7 +51,7 @@ SO THAT I can conveniently pull them up wherever I am to cook a meal
 #### New/Edit Recipe
 ![image](https://user-images.githubusercontent.com/4752879/200122434-a9efa132-53b4-4fec-bf51-79448df90bb8.png)
 
-###Recipe Detail
+### Recipe Detail
 ![image](https://user-images.githubusercontent.com/4752879/200122460-e3c87241-b683-4839-a5b7-b39c674eef0f.png)
 
 ### Sign Up & Login
@@ -62,5 +62,5 @@ SO THAT I can conveniently pull them up wherever I am to cook a meal
 https://damp-wave-57141.herokuapp.com/
 
 ## Developers
-[Joseph Archer](https://github.com/Archer216)
-[Dustin Tierney](https://github.com/dtierney21)
+-[Joseph Archer](https://github.com/Archer216)
+-[Dustin Tierney](https://github.com/dtierney21)
