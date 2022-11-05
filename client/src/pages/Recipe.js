@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Ingredient from '../components/Ingredient';
 import Step from '../components/Step';
 import { useParams } from 'react-router-dom';
@@ -7,35 +7,26 @@ import { useQuery } from '@apollo/client';
 
 
 
-
-const singleRecipe = {
-    recipe: 'spaghetti', id: 1, steps: ["Make the food", "Eat food"]
-    , ingredients: ["Pasta", "Sauce", "Ground Beef", "Salt", "Pepper"]
-};
-
-
-
 function Recipe() {
-    // const { id } = useParams();
-    // console.log(id)
 
-    // const { data, isLoading } = useQuery(QUERY_RECIPE, {
-    //     variables: id
-    // });
-
-    // console.log(data)
-
-    // if (data) {
+    const { id } = useParams()
 
 
-    return (
+
+    const { data, isLoading } = useQuery(QUERY_RECIPE, {
+        variables: { recipeId: id }
+    })
+    if (isLoading)
+        return (<div>page loading</div>)
+
+    if (data) return (
         <div class="flex justify-center bg-base-100 max-h-screen py-10">
             <div class="container flex flex-col justify-items-stretch ...">
                 <div className="hero bg-secondary rounded-2xl">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
-                            <h1 className="text-5xl font-bold">{singleRecipe.recipe}</h1>
+                            <h1 className="text-5xl font-bold">test</h1>
                             <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                             <button className="btn btn-warning">Edit</button>
 
@@ -54,7 +45,7 @@ function Recipe() {
                         <h2 className='text-2xl'>Steps:</h2>
                         <div className="divider bg-base-100"></div>
                         <ol role="list" class='list-decimal marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400'>
-                            <Step stps={singleRecipe.steps} />
+                            {/* <Step stps={singleRecipe.steps} /> */}
                         </ol>
                     </div>
 
@@ -65,7 +56,7 @@ function Recipe() {
                         <h2 className='text-2xl'>Ingredients:</h2>
                         <div className="divider bg-base-100"></div>
                         <ul role="list" class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400">
-                            <Ingredient ings={singleRecipe.ingredients} />
+                            {/* <Ingredient ings={singleRecipe.ingredients} /> */}
                         </ul>
                     </div>
                 </div>
