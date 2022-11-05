@@ -118,7 +118,10 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addRecipe: async (_, { RecipeInput: { recipeName, description, notes, public, ingredients, steps } }) => {
+        addRecipe: async (
+            _,
+            { RecipeInput: { recipeName, description, image, notes, public, ingredients, steps } }
+        ) => {
             const newRecipe = new Recipe({
                 recipeName,
                 description,
