@@ -84,12 +84,11 @@ export const QUERY_RECIPES = gql`
 `;
 
 export const QUERY_RECIPE = gql`
-    query getRecipe($recipeId: ID!) {
-        recipe(recipeId: $recipeId) {
+    query getRecipe($_id: ID!) {
+        recipe(_id: $_id) {
             _id
             recipeName
             description
-            image
             notes
             rating
             ingredients {
