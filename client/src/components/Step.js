@@ -4,9 +4,9 @@ import React from 'react'
 function Step({ stps }) {
     return (
         <>
-            {stps.map((ele) => (
-                <li>{ele}</li>
-            )
+            {stps.map((ele) => {
+                return <li key={ele.stepText}>{ele.stepText}</li>
+            }
             )}
         </>
     );
