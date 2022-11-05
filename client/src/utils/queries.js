@@ -68,6 +68,7 @@ export const QUERY_RECIPES = gql`
             _id
             recipeName
             description
+            image
             notes
             rating
             ingredients {
@@ -89,6 +90,7 @@ export const QUERY_RECIPE = gql`
             _id
             recipeName
             description
+            image
             notes
             rating
             ingredients {
