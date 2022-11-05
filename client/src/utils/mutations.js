@@ -26,7 +26,6 @@ export const ADD_RECIPE = gql`
     mutation insertRecipe(
         $recipeName: String!
         $description: String!
-        $image: String
         $ingredients: [IngredientInput]
         $steps: [StepInput]
     ) {
